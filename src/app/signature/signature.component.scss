@@ -1,0 +1,88 @@
+
+%beforeAndAfter {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 40%;
+  height: 10px;
+  bottom: 10px;
+  background: transparent;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+.signaturePad{
+  position: relative;
+  font-size: 10px;
+  width: 100%;
+  height: 260px;
+  max-width: 700px;
+  max-height: 260px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
+  border-radius: 4px;
+  padding: 16px;
+
+  &::before{
+    @extend %beforeAndAfter;
+    left: 20px;
+    -webkit-transform: skew(-3deg) rotate(-3deg);
+            transform: skew(-3deg) rotate(-3deg);
+  }
+  &::after{
+    @extend %beforeAndAfter;
+    right: 20px;
+    -webkit-transform: skew(3deg) rotate(3deg);
+            transform: skew(3deg) rotate(3deg);
+  }
+
+  canvas{}
+
+  footer{
+    text-align: center;
+    border: solid 1px #666666;
+    border-width: 3px 0 0 0;
+    position: relative;
+    &::before{
+      content: 'X.';
+      font-size: 24px;
+      position: absolute;
+      height: 35px;
+      bottom: 30px;
+      left: 0;
+      font-weight: 700;
+    }
+    &::after{
+      content: 'Sign above';
+      font-size: 16px;
+      position: relative;
+      height: 35px;
+      bottom:0;
+      color: #4D4D4D;
+    }
+  }
+}
+.signature{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  padding: 15px;
+  margin: 20px auto;
+
+  button{
+    position: relative;
+    float: right;
+    top: 15px;
+    bottom: 5px;
+  }
+}
+
+
+
+
+// .signature-canvas {
+//   border-color: black;
+//   border-style:solid;
+//   border-width:3px;
+//   background: transparent;
+// }

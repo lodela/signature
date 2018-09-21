@@ -1,0 +1,14 @@
+<div class="signature">
+  <div class="signaturePad">
+    <canvas #canvasEl width="660" height="200"
+            (mousedown)="mouseOverEvent($event)"
+            (mouseup)="mouseUpEvent($event)"
+            (mousemove)="mouseMoveEvent($event)"
+            (mouseleave)="mouseLeaveEvent($event)">
+    </canvas>
+    <footer></footer>
+  </div>
+  <button *ngIf="displayClear"
+          (click)="clearCanvas()"
+          type="button" class="btn btn-outline-danger clearSignature"><i class="fa fa-trash"></i></button>
+</div>
