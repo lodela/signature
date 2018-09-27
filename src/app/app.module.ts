@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { SignatureComponent } from './signature/signature.component';
 
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { ShowSignatureComponent } from './show-signature/show-signature.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignatureComponent
+    SignatureComponent,
+    ShowSignatureComponent
   ],
   imports: [
     BrowserModule,
